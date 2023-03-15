@@ -14,5 +14,6 @@ public class HomeTest extends BaseTest {
 
         LOG.info("Verify if 'Hero' is displayed");
         Assert.assertTrue(homePage.isHeroDisplayed(), "'Hero is not displayed");
+
     }
 }
