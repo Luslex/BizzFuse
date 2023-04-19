@@ -5,6 +5,10 @@
         <classes>
             <class name="tests.HomeTest.HomeTest">
             </class>
+            <class name="tests.CompanyTest.CompanyTest">
+            </class>
+            <class name="tests.ExplorerTest.ExplorerTest">
+            </class>
         </classes>
     </test>
 
