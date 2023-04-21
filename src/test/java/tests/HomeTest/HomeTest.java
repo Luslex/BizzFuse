@@ -11,6 +11,7 @@ import static pages.BasePage.getBaseURL;
 
 public class HomeTest extends BaseTest {
     private String newURL = getBaseURL() + ".com/signup";
+    private String newURL2 = getBaseURL() + ".com/login";
     private static final Logger LOG = LoggerFactory.getLogger(HomeTest.class);
 
     @Test
@@ -37,6 +38,8 @@ public class HomeTest extends BaseTest {
         LOG.info("Click the Submit button");
         homePage.clickSumbitBtn();
 
+        driver.get(newURL2);
+
         LOG.info("Type in the login email input field");
         homePage.typeInLoginEmail(loginEmail);
 
@@ -62,6 +65,8 @@ public class HomeTest extends BaseTest {
 
         LOG.info("Click the Sign Up button");
         homePage.clickSignUpBtn();
+
+        homePage.isAlertPresent();
 
 
     }

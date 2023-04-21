@@ -10,6 +10,7 @@ import static pages.BasePage.getBaseURL;
 
 public class ExplorerTest extends BaseTest {
     private String newURL = getBaseURL() + ".com/home_user";
+
     private static final Logger LOG = LoggerFactory.getLogger(ExplorerTest.class);
 
     @Test

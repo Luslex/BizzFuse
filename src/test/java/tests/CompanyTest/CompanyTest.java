@@ -9,7 +9,8 @@ import static pages.BasePage.driver;
 import static pages.BasePage.getBaseURL;
 
 public class CompanyTest extends BaseTest {
-    private String newURL = getBaseURL() + ".com";
+    private String newURL = getBaseURL() + ".com  ";
+    String url = "https://bizzfuse.herokuapp.com";
     private static final Logger LOG = LoggerFactory.getLogger(CompanyTest.class);
 
     @Test
@@ -17,8 +18,9 @@ public class CompanyTest extends BaseTest {
         String loginEmail = "25bhaam@gmail.com";
         String loginPassword = "dovlecel123";
 
+        driver.get(url);
 
-        driver.get(newURL);
+
         LOG.info("Click the Login Slide button");
         companyPage.clickLoginTabBtn();
 

@@ -2,6 +2,7 @@ package pages.HomePage;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.BasePage;
@@ -64,9 +65,6 @@ public class HomePage extends BasePage {
 
     public void clickSumbitBtn() {
         LOG.info("Click the Submit button");
-        driver.findElement(submitBtn).click();
-        driver.switchTo().alert().accept();
-
     }
 
     public void typeInLoginEmail(String loginEmail) {
@@ -109,6 +107,21 @@ public class HomePage extends BasePage {
     public void clickSignUpBtn() {
         LOG.info("Click the Sign Up button");
         driver.findElement(submitBtn).click();
+
+    }
+
+    public boolean isAlertPresent()
+    {
+        try
+        {
+            driver.switchTo().alert();
+            driver.switchTo().alert().accept();
+            return true;
+        }
+        catch (NoAlertPresentException Ex)
+        {
+            return false;
+        }
     }
 
 }
