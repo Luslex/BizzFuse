@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeSuite;
 import pages.BasePage;
 import pages.CompanyPage.CompanyPage;
 import pages.ExplorerPage.ExplorerPage;
+import pages.ExplorerPage.ProfilePage;
 import pages.HomePage.HomePage;
 
 public class BaseTest {
@@ -12,6 +13,7 @@ public class BaseTest {
     public HomePage homePage = HomePage.getInstance();
     public CompanyPage companyPage = CompanyPage.getInstance();
     public ExplorerPage explorerPage = ExplorerPage.getInstance();
+    public ProfilePage profilePage = ProfilePage.getInstance();
 
     @BeforeSuite
     public void init() {

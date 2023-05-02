@@ -9,6 +9,8 @@
             </class>
             <class name="tests.ExplorerTest.ExplorerTest">
             </class>
+            <class name="tests.ExplorerTest.ProfileTest">
+            </class>
         </classes>
     </test>
 
